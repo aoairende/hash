@@ -1,7 +1,15 @@
 #!/usr/bin/python3
-Square = __import__('10-square').Square
+""" 10-main """
+from models.square import Square
 
-s = Square(13)
+if __name__ == "__main__":
+    s1 = Square(5)
+    print(s1)
+    print(s1.size)
+    s1.size = 10
+    print(s1)
 
-print(s)
-print(s.area())
+    try:
+        s1.size = "9"
+    except Exception as e:
+        print("[{}] {}".format(e.__class__.__name__, e))

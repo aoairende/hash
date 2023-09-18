@@ -1,22 +1,22 @@
 #!/usr/bin/python3
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
+""" Doc """
+from models.rectangle import Rectangle
 
-bg = BaseGeometry()
+if __name__ == "__main__":
+    r1 = Rectangle(10, 10, 10, 10)
+    print(r1)
 
-bg.integer_validator("my_int", 12)
-bg.integer_validator("width", 89)
+    r1.update(89, h=3, w=4)
+    print(r1)
 
-try:
-    bg.integer_validator("name", "John")
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
+    r1.update(89, 2)
+    print(r1)
 
-try:
-    bg.integer_validator("age", 0)
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
+    r1.update(89, 2, 3)
+    print(r1)
 
-try:
-    bg.integer_validator("distance", -4)
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
+    r1.update(89, 2, 3, 4)
+    print(r1)
+
+    r1.update(89, 2, 3, 4, 5)
+    print(r1)

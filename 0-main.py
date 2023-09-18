@@ -1,14 +1,19 @@
 #!/usr/bin/python3
-lookup = __import__('0-lookup').lookup
+""" 0-main """
+from models.base import Base
 
-class MyClass1(object):
-    pass
+if __name__ == "__main__":
+    b1 = Base()
+    print(b1.id)
 
-class MyClass2(object):
-    my_attr1 = 3
-    def my_meth(self):
-        pass
+    b2 = Base()
+    print(b2.id)
 
-print(lookup(MyClass1))
-print(lookup(MyClass2))
-print(lookup(int))
+    b3 = Base()
+    print(b3.id)
+
+    b4 = Base(12)
+    print(b4.id)
+
+    b5 = Base()
+    print(b5.id)

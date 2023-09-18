@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-inherits_from = __import__('4-inherits_from').inherits_from
+""" 4-main """
+from models.rectangle import Rectangle
 
-a = True
-if inherits_from(a, int):
-    print("{} inherited from class {}".format(a, int.__name__))
-if inherits_from(a, bool):
-    print("{} inherited from class {}".format(a, bool.__name__))
-if inherits_from(a, object):
-    print("{} inherited from class {}".format(a, object.__name__))
+if __name__ == "__main__":
+    r1 = Rectangle(4, 6)
+    r1.display()
+
+    print("---")
+
+    r1 = Rectangle(2, 2)
+    r1.display()

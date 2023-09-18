@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-BaseGeometry = __import__('5-base_geometry').BaseGeometry
+""" 5-main """
+from models.rectangle import Rectangle
 
-bg = BaseGeometry()
+if __name__ == "__main__":
+    r1 = Rectangle(4, 6, 2, 1, 12)
+    print(r1)
 
-print(bg)
-print(dir(bg))
-print(dir(BaseGeometry))
+    r2 = Rectangle(5, 5, 1)
+    print(r2)

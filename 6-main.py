@@ -1,9 +1,12 @@
 #!/usr/bin/python3
-BaseGeometry = __import__('6-base_geometry').BaseGeometry
+""" 6-main """
+from models.rectangle import Rectangle
 
-bg = BaseGeometry()
+if __name__ == "__main__":
+    r1 = Rectangle(2, 3, 2, 2)
+    r1.display()
 
-try:
-    print(bg.area())
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
+    print("---")
+
+    r2 = Rectangle(3, 2, 1, 0)
+    r2.display()

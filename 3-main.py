@@ -1,10 +1,13 @@
 #!/usr/bin/python3
-is_kind_of_class = __import__('3-is_kind_of_class').is_kind_of_class
+""" 3-main """
+from models.rectangle import Rectangle
 
-a = 1
-if is_kind_of_class(a, int):
-    print("{} comes from {}".format(a, int.__name__))
-if is_kind_of_class(a, float):
-    print("{} comes from {}".format(a, float.__name__))
-if is_kind_of_class(a, object):
-    print("{} comes from {}".format(a, object.__name__))
+if __name__ == "__main__":
+    r1 = Rectangle(3, 2)
+    print(r1.area())
+
+    r2 = Rectangle(2, 10)
+    print(r2.area())
+
+    r3 = Rectangle(8, 7, 0, 0, 12)
+    print(r3.area())
