@@ -13,6 +13,7 @@ class Rectangle(Base):
     '''
 
     def __init__(self, width, height, x=0, y=0, id=None):
+        ''' Initialize the Rectangle object. '''
         self.width = width
         self.height = height
         self.x = x
@@ -100,10 +101,12 @@ class Rectangle(Base):
             Updates the arguments in the class
         '''
         if len(args) == 0:
+            ''' Update class attributes using keyword arguments. '''
             for key, val in kwargs.items():
                 self.__setattr__(key, val)
             return
         try:
+            ''' Update class attributes using positional arguments. '''
             self.id = args[0]
             self.width = args[1]
             self.height = args[2]
@@ -134,7 +137,7 @@ class Rectangle(Base):
 
     def __str__(self):
         '''
-            Overwritting the str method
+            Overwritting the string method
         '''
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y,
                                                        self.width, self.height)
