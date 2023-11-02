@@ -2,15 +2,17 @@
 
 /**
  * heap_insert - inserts a value in Max Binary Heap
+ *
  * @root: a double pointer to the root node of the Heap to insert the value
  * @value: the value to store in the node to be inserted
  *
  * Return: a pointer to the created node
  *         NULL on failure
  */
+
 heap_t *heap_insert(heap_t **root, int value)
 {
-	heap_t *tree, *new, *flip;
+	heap_t *tree, *new_binary, *flip;
 	int size, leaves, sub, bit, level, tmp;
 
 	if (!root)
@@ -36,29 +38,31 @@ heap_t *heap_insert(heap_t **root, int value)
 	 * The first empty node is 101 == RLR, *root->right->left->right
 	 */
 
-	new = binary_tree_node(tree, value);
-	leaves & 1 ? (tree->right = new) : (tree->left = new);
+	new_binary = binary_tree_node(tree, value);
+	leaves & 1 ? (tree->right = new_binary) : (tree->left = new_binary);
 
-	flip = new;
+	flip = new_binary;
 	for (; flip->parent && (flip->n > flip->parent->n); flip = flip->parent)
 	{
 		tmp = flip->n;
 		flip->n = flip->parent->n;
 		flip->parent->n = tmp;
-		new = new->parent;
+		new_binary = new_binary->parent;
 	}
-	/* Flip values with parent until parent value exceeds new value */
+	/* Flip values with parent until parent value exceeds new_binary value */
 
-	return (new);
+	return (new_binary);
 }
 
 /**
  * binary_tree_size - measures the size of a binary tree
+ *
  * @tree: tree to measure the size of
  *
  * Return: size of the tree
  *         0 if tree is NULL
  */
+
 size_t binary_tree_size(const binary_tree_t *tree)
 {
 	if (!tree)

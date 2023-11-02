@@ -2,46 +2,48 @@
 
 /**
  * bst_insert - Inserts a value in a Binary Search Tree.
+ *
  * @tree: A double pointer to the root node of the BST to insert the value.
  * @value: The value to store in the node to be inserted.
  *
  * Return: A pointer to the created node, or NULL on failure.
  */
+
 bst_t *bst_insert(bst_t **tree, int value)
 {
-	bst_t *curr, *new;
+	bst_t *current, *new_binary;
 
 	if (tree != NULL)
 	{
-		curr = *tree;
+		current = *tree;
 
-		if (curr == NULL)
+		if (current == NULL)
 		{
-			new = binary_tree_node(curr, value);
-			if (new == NULL)
+			new_binary = binary_tree_node(current, value);
+			if (new_binary == NULL)
 				return (NULL);
-			return (*tree = new);
+			return (*tree = new_binary);
 		}
 
-		if (value < curr->n) /* insert in left subtree */
+		if (value < current->n) /* insert in left subtree */
 		{
-			if (curr->left != NULL)
-				return (bst_insert(&curr->left, value));
+			if (current->left != NULL)
+				return (bst_insert(&current->left, value));
 
-			new = binary_tree_node(curr, value);
-			if (new == NULL)
+			new_binary = binary_tree_node(current, value);
+			if (new_binary == NULL)
 				return (NULL);
-			return (curr->left = new);
+			return (current->left = new_binary);
 		}
-		if (value > curr->n) /* insert in right subtree */
+		if (value > current->n) /* insert in right subtree */
 		{
-			if (curr->right != NULL)
-				return (bst_insert(&curr->right, value));
+			if (current->right != NULL)
+				return (bst_insert(&current->right, value));
 
-			new = binary_tree_node(curr, value);
-			if (new == NULL)
+			new_binary = binary_tree_node(current, value);
+			if (new_binary == NULL)
 				return (NULL);
-			return (curr->right = new);
+			return (current->right = new_binary);
 		}
 	}
 	return (NULL);

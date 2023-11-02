@@ -52,7 +52,7 @@ int successor(bst_t *node)
  */
 int remove_type(bst_t *root)
 {
-	int new_value = 0;
+	int new_binary_value = 0;
 
 	if (!root->left && !root->right)
 	{
@@ -86,9 +86,9 @@ int remove_type(bst_t *root)
 	}
 	else
 	{
-		new_value = successor(root->right);
-		root->n = new_value;
-		return (new_value);
+		new_binary_value = successor(root->right);
+		root->n = new_binary_value;
+		return (new_binary_value);
 	}
 }
 /**
