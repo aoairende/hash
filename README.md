@@ -1,8 +1,8 @@
-# 0x13. Firewall
+# 0x12. Web stack debugging #2
 
 ## Tasks
-### 0. Block all incoming traffic but
-- Let’s install the ufw firewall and setup a few rules on web-01.
+### 0. Run software as another user
 
-### 1. Port forwarding
--Firewalls can not only filter requests, they can also forward them.
+### 1. Run Nginx as Nginx
+
+### 2. 7 lines or less
