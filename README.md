@@ -1,14 +1,15 @@
-# 0x16. API advanced
+# 0x15. API
 
 ## Tasks
-### 0. How many subs?
-- Write a function that queries the Reddit API and returns the number of subscribers (not active users, total subscribers) for a given subreddit. If an invalid subreddit is given, the function should return 0.
+### 0. Gather data from an API
+- Write a Python script that, using this REST API, for a given employee ID, returns information about his/her TODO list progress.
 
-### 1. Top Ten
-- Write a function that queries the Reddit API and prints the titles of the first 10 hot posts listed for a given subreddit.
+### 1. Export to CSV
+- Using what you did in the task #0, extend your Python script to export data in the CSV format.
 
-### 2. Recurse it!
-- Write a recursive function that queries the Reddit API and returns a list containing the titles of all hot articles for a given subreddit. If no results are found for the given subreddit, the function should return None.
+### 2. Export to JSON
+- Using what you did in the task #0, extend your Python script to export data in the JSON format.
 
-### 3. Count it!
-- Write a recursive function that queries the Reddit API, parses the title of all hot articles, and prints a sorted count of given keywords (case-insensitive, delimited by spaces. Javascript should count as javascript, but java should not).
+### 3. Dictionary of list of dictionaries
+- Using what you did in the task #0, extend your Python script to export data in the JSON format.
+
