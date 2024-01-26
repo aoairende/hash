@@ -1,11 +1,19 @@
-# Web Stack debugging 4
+# 0x1A. Application server
 
 ## Tasks
-### 0. Sky is the limit, let's bring that limit higher
-- In this web stack debugging task, we are testing how well our web server setup featuring Nginx is doing under pressure and it turns out it’s not doing well: we are getting a huge amount of failed requests.
+### 0. Set up development with Python
+- Let’s serve what you built for AirBnB clone v2 - Web framework on web-01. This task is an exercise in setting up your development environment, which is used for testing and debugging your code before deploying it to production.
 
+### 1. Set up production with Gunicorn
 
+### 2. Serve a page with Nginx
 
-### 1. User limit
-- Change the OS configuration so that it is possible to login with the holberton user and open a file without any error message.
+### 3. Add a route with query parameters
 
+### 4. Let's do this for your API
+
+### 5. Serve your AirBnB clone
+
+### 6. Deploy it!
+
+### 7. No service interruption
